@@ -1,8 +1,8 @@
-# FIFO-Queue---C-
+# FIFO-Queue using C#
 A Priority Queue is a FIFO queue/buffer | No additional "using" statements | No use of Array.sort() or Array.resize(), or any built-in or API methods that provide this functionality
 
 <code>
- using System;
+using System;
 // No additional "using" statements may be added.
 // Adding references as "System.Collections.Hashtable myHashtable = ..." are also disallowed.
 // No use of Array.sort() or Array.resize(), or any built-in or API methods that provide this functionality.
@@ -242,8 +242,7 @@ namespace PriorityQueue
 
             //Note:  A different set of test data will be used for testing than is provided above. This needs to be an all purpose solution.
         }
-
     }
+}
 
-} 
 </code>
