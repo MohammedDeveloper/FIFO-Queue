@@ -76,7 +76,7 @@ namespace PriorityQueue
             /// <param name="priority">Priority</param>
             public void AddTask(string taskDescription, int priority)
             {
-                if (_counter < 10)
+                if (_counter < System.Int16.MaxValue)
                 {
                     /// add the task...
                     queueItems[_counter] = new Task() { Description = taskDescription, Priority = priority };
@@ -187,7 +187,7 @@ namespace PriorityQueue
             pq = new MyQueue(System.Int16.MaxValue);
 
             /// Check: Tried System.Int16.MaxValue has "Out Of Memory Exception"
-         
+
             //The output for the above should be: 
             /// sixth - 5
             /// third - 3
@@ -199,7 +199,7 @@ namespace PriorityQueue
             /// fourth - 1
             /// fifth - 1
             /// seventh - 1
-            
+
             // Sample test data/code
             pq.AddTask("first", 1);
             pq.AddTask("second", 1);
@@ -214,14 +214,15 @@ namespace PriorityQueue
             //Console.WriteLine("GetNext(): " + pq.NextTask());
             //Console.WriteLine("GetNext(): " + pq.NextTask());
             //Console.WriteLine("GetNext(): " + pq.NextTask());
-            Console.WriteLine("GetNext(): " + pq.NextTask());
-            Console.WriteLine("GetNext(): " + pq.NextTask());
-            Console.WriteLine("GetNext(): " + pq.NextTask());
-            Console.WriteLine("GetNext(): " + pq.NextTask());
+            //Console.WriteLine("GetNext(): " + pq.NextTask());
+            //Console.WriteLine("GetNext(): " + pq.NextTask());
+            //Console.WriteLine("GetNext(): " + pq.NextTask());
+            //Console.WriteLine("GetNext(): " + pq.NextTask());
             pq.AddTask("seventh", 1);
             pq.AddTask("eighth", 2);
             pq.AddTask("ninth", 2);
             pq.AddTask("tenth", 3);
+            Console.WriteLine("GetNext(): " + pq.NextTask());
             Console.WriteLine("GetNext(): " + pq.NextTask());
             Console.WriteLine("GetNext(): " + pq.NextTask());
             Console.WriteLine("GetNext(): " + pq.NextTask());
