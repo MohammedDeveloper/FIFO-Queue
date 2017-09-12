@@ -2,16 +2,6 @@ using System;
 // No additional "using" statements may be added.
 // Adding references as "System.Collections.Hashtable myHashtable = ..." are also disallowed.
 // No use of Array.sort() or Array.resize(), or any built-in or API methods that provide this functionality.
-// This is to see your problem solving skills, not your knowledge of the API.
-
-
-// To start, create a new C# Console Application project.
-// Cut and paste the contents of the file into the default project Program.cs file.
-// Completely replace the existing contents of that file.
-
-// When complete, return the resultant Program.cs from your new project folder.
-
-
 namespace PriorityQueue
 {
     class Program
@@ -201,6 +191,7 @@ namespace PriorityQueue
             //The output for the above should be: 
             /// sixth - 5
             /// third - 3
+            /// tenth - 3
             /// eight - 2
             /// ninth - 2
             /// first - 1
@@ -223,6 +214,10 @@ namespace PriorityQueue
             //Console.WriteLine("GetNext(): " + pq.NextTask());
             //Console.WriteLine("GetNext(): " + pq.NextTask());
             //Console.WriteLine("GetNext(): " + pq.NextTask());
+            Console.WriteLine("GetNext(): " + pq.NextTask());
+            Console.WriteLine("GetNext(): " + pq.NextTask());
+            Console.WriteLine("GetNext(): " + pq.NextTask());
+            Console.WriteLine("GetNext(): " + pq.NextTask());
             pq.AddTask("seventh", 1);
             pq.AddTask("eighth", 2);
             pq.AddTask("ninth", 2);
@@ -251,8 +246,6 @@ namespace PriorityQueue
             //GetNext(): eight - 2
             //GetNext(): ninth - 2
             //GetNext(): seventh - 1
-
-            //Note:  A different set of test data will be used for testing than is provided above. This needs to be an all purpose solution.
         }
     }
 }
