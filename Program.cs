@@ -123,7 +123,7 @@ namespace PriorityQueue
 
                 /// Queue items sorting
                 /// Priortizes the tasks
-                PrioritizeTasks();
+                //PrioritizeTasks();
 
                 /// "next" task based on the rules above and remove it from the queue
                 return itemPopped.Description + " -- " + itemPopped.Priority;
@@ -167,7 +167,7 @@ namespace PriorityQueue
                             temp = queueItems[item2];
 
                             /// push down the items 
-                            for (int item3 = item2; item3 > 0; item3--)
+                            for (int item3 = item2; item3 > item1; item3--)
                             {
                                 queueItems[item3] = queueItems[item3 - 1];
                             }
@@ -197,25 +197,41 @@ namespace PriorityQueue
             pq = new MyQueue(System.Int16.MaxValue);
 
             /// Check: Tried System.Int16.MaxValue has "Out Of Memory Exception"
-
+         
+            //The output for the above should be: 
+            /// sixth - 5
+            /// third - 3
+            /// eight - 2
+            /// ninth - 2
+            /// first - 1
+            /// second - 1
+            /// fourth - 1
+            /// fifth - 1
+            /// seventh - 1
+            
             // Sample test data/code
             pq.AddTask("first", 1);
             pq.AddTask("second", 1);
             pq.AddTask("third", 3);
             pq.AddTask("fourth", 1);
-            Console.WriteLine("GetNext(): " + pq.NextTask());
-            Console.WriteLine("GetNext(): " + pq.NextTask());
+            //Console.WriteLine("GetNext(): " + pq.NextTask());
+            //Console.WriteLine("GetNext(): " + pq.NextTask());
             pq.AddTask("fifth", 1);
             pq.AddTask("sixth", 5);
-            Console.WriteLine("GetNext(): " + pq.NextTask());
-            Console.WriteLine("GetNext(): " + pq.NextTask());
-            Console.WriteLine("GetNext(): " + pq.NextTask());
-            Console.WriteLine("GetNext(): " + pq.NextTask());
-            Console.WriteLine("GetNext(): " + pq.NextTask());
+            //Console.WriteLine("GetNext(): " + pq.NextTask());
+            //Console.WriteLine("GetNext(): " + pq.NextTask());
+            //Console.WriteLine("GetNext(): " + pq.NextTask());
+            //Console.WriteLine("GetNext(): " + pq.NextTask());
+            //Console.WriteLine("GetNext(): " + pq.NextTask());
             pq.AddTask("seventh", 1);
             pq.AddTask("eighth", 2);
             pq.AddTask("ninth", 2);
             pq.AddTask("tenth", 3);
+            Console.WriteLine("GetNext(): " + pq.NextTask());
+            Console.WriteLine("GetNext(): " + pq.NextTask());
+            Console.WriteLine("GetNext(): " + pq.NextTask());
+            Console.WriteLine("GetNext(): " + pq.NextTask());
+            Console.WriteLine("GetNext(): " + pq.NextTask());
             Console.WriteLine("GetNext(): " + pq.NextTask());
             Console.WriteLine("GetNext(): " + pq.NextTask());
             Console.WriteLine("GetNext(): " + pq.NextTask());
